@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shino Shamit — Cybersecurity Portfolio</title>
-  <meta name="description" content="Shino Shamit — Cybersecurity Portfolio (SOC, Detection, Threat Hunting, Incident Response)" />
+  <meta name="description" content="Shino Shamit — Cybersecurity Portfolio" />
 
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBYZ7T2VBB"></script>
@@ -49,7 +49,7 @@
     a{ color:inherit; text-decoration:none; }
     .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 60px; }
 
-    /* NAV */
+ 
     .nav{
       position:sticky; top:10px; z-index:10;
       backdrop-filter: blur(14px);
@@ -80,7 +80,6 @@
     }
     .links a:hover{ color:var(--text); border-color:var(--line); background:rgba(255,255,255,0.04); }
 
-    /* BUTTONS */
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 14px;
@@ -101,7 +100,7 @@
       color:var(--text);
     }
 
-    /* HERO GRID */
+   
     .grid{
       display:grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -118,7 +117,22 @@
       padding:28px;
       position:relative;
       overflow:hidden;
+    
+     
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
     }
+    .hero-actions{
+      margin-top: 18px;
+    }
+    .hero .pills{
+      margin-top: 18px;
+    }
+    .hero .spacer{
+      flex: 1;
+    }
+
     .hero:before{
       content:"";
       position:absolute; inset:-80px -120px auto auto;
@@ -164,7 +178,7 @@
     .mini p{ margin:0; font-size:14px; color:var(--muted); line-height:1.5; }
     .mini a{ color:rgba(77,163,255,0.95); text-decoration:underline; text-underline-offset:3px; }
 
-    /* PHOTO */
+    
     .photoWrap{
       display:flex;
       align-items:center;
@@ -188,7 +202,7 @@
       text-align:center;
     }
 
-    /* SECTIONS */
+   
     section{ margin-top:18px; }
     .section-card{ padding:22px; }
     .section-title{
@@ -333,7 +347,6 @@
 
 <body>
   <div class="wrap">
-    <!-- NAV -->
     <div class="nav">
       <div class="brand">
         <div class="dot" aria-hidden="true"></div>
@@ -351,7 +364,7 @@
       </div>
     </div>
 
-    <!-- HERO -->
+  
     <div class="grid">
       <div class="card hero">
         <h1>Cyber secure ..... what?</h1>
@@ -360,7 +373,7 @@
           I enjoy turning messy alerts, strange traffic, 
           and ‘that’s weird…’ moments into clear explanations, documented incidents, and stronger defenses.
         </p>
-
+        <div class="spacer"></div>
         <div class="pills" aria-label="Quick highlights">
           <span class="pill">Melbourne, AU</span>
           <span class="pill">Cyber Security Grad (RMIT)</span>
@@ -473,10 +486,12 @@
       <div class="projects">
         <div class="project">
           <h3>Home SOC Lab</h3>
-          <p>Built a repeatable lab with Microsoft Azure and Sentinel to generate logs, simulate suspicious activity, 
-            and practice triage + investigation with structured notes.</p>
+          <p>Built a real-world styled cybersecurity home lab using Microsoft Azure and Microsoft Sentinel to simulate 
+            a small Security Operations Centre (SOC) environment. The goal of this project was to gain hands-on
+            experience with log ingestion, threat detection, incident analysis, and security visualisation using 
+            cloud-native tools.</p>
           <div class="meta">
-            <span>Virtualization</span><span>Linux</span><span>Mircrosoft Snetinel</span>
+            <span>Virtualization</span><span>Azure</span><span>Mircrosoft Snetinel</span>
           </div>
         </div>
 
@@ -524,18 +539,19 @@
           </ul>
         </div>
 
-        <div class="role">
-          <strong> Home Security Lab Building (Personal)</strong>
-          <div class="small">Detection • Hunting • Repeatable scenarios</div>
-          <ul>
-            <li>Set up lab environments to safely test attack/defense scenarios and build intuition for logs and alerts.</li>
-            <li>Built and operated a cloud-based Security Operations Center (SOC) lab using Microsoft Azure and Microsoft Sentinel</li>
-            <li>Deployed a virtual machine exposed to the internet, configured log forwarding into an Azure Log Analytics workspace, 
-              and integrated logs into Sentinel for real-time analysis. 
-              <li>Used Kusto Query Language (KQL) to query and visualise logs — including failed login attempts — 
-                and constructed an attack map to visualise the geographic origin of those attacks.</li>
-          </ul>
-        </div>
+       <div class="role">
+      <strong>AR Data – Data Engineer / Data Intern</strong>
+      <div class="small">Data Engineering • Secure Pipelines • Automation • Quality & Compliance</div>
+      <ul>
+        <li>Developed and maintained cloud-based data storage architectures and SQL databases, optimising data retrieval, scalability, and performance.</li>
+        <li>Implemented automated data-quality checks, logging, and exception handling to ensure accuracy, completeness, and reliability across data pipelines.</li>
+        <li>Ensured strict compliance with data confidentiality and security requirements by integrating access controls, encryption, and secure data-handling practices.</li>
+        <li>Cleaned, validated, and standardised large datasets, resolving inconsistencies, removing duplicates, and preparing structured formats (CSV, JSON, XML) for downstream systems.</li>
+        <li>Collaborated cross-functionally with service teams to translate client requirements into technical data solutions, improving delivery speed, quality, and accuracy.</li>
+        <li>Documented workflows, identified process inefficiencies, and supported continuous improvement through automation and standardisation.</li>
+        <li>Participated in agile ceremonies including stand-ups and sprint reviews, strengthening communication, planning, and delivery practices.</li>
+      </ul>
+    </div>
       </div>
     </section>
 
@@ -547,54 +563,32 @@
       </div>
 
       <div class="contact">
-        <div class="mini">
-          <h3>Get in touch</h3>
-          <p style="margin-bottom:10px;">
-            Email: <a href="mailto:shinoshamitau@outlook.com">shinoshamitau@outlook.com</a><br />
-            LinkedIn: <a href="https://www.linkedin.com/in/shino-shamit/" target="_blank" rel="noreferrer">linkedin.com/in/shinoshamit</a><br />
-            GitHub: <a href="https://github.com" target="_blank" rel="noreferrer">github.com/yourusername</a>
-          </p>
-          <p>Use the form to open your email app with a pre-filled message.</p>
+       <div class="mini">
+        <h3>Get in touch</h3>
+        <p style="margin-bottom:10px;">
+          Email: <span class="kbd">shinoshamitau@outlook.com</span><br />
+          LinkedIn: <a href="https://www.linkedin.com/in/shino-shamit/" target="_blank" rel="noreferrer">linkedin.com/in/shino-shamit</a><br />
+          GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">github.com/yourusername</a>
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+          <a class="btn" href="https://www.linkedin.com/in/shino-shamit/" target="_blank" rel="noreferrer">Message on LinkedIn</a>
+          <a class="btn secondary" href="mailto:shinoshamitau@outlook.com">Email (optional)</a>
         </div>
-
-        <form class="form" onsubmit="return sendEmail(event)">
-          <input id="name" name="name" placeholder="Your name" required />
-          <input id="email" name="email" type="email" placeholder="Your email" required />
-          <textarea id="message" name="message" placeholder="Your message" required></textarea>
-          <button class="btn" type="submit">Send</button>
-          <div style="color:var(--muted); font-size:12px; line-height:1.5;">
-           
-          </div>
-        </form>
-      </div>
+    </div>
     </section>
 
     <div class="footer">
       © <span id="year"></span> Shino Shamit · Cybersecurity Portfolio · Designed and inspired by OpenAI
-
     </div>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    function sendEmail(e){
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      const subject = encodeURIComponent(`Portfolio message from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`);
-      // Replace with YOUR email address:
-      const to = "shinoshamitau@outlook.com";
-
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-      return false;
-    }
   </script>
 </body>
 </html>
+
 
 
 
