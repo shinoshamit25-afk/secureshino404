@@ -100,7 +100,16 @@
       color:var(--text);
     }
 
-   
+     .hero-bullets{
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.55;
+    }
+    .hero-bullets li{
+      margin: 8px 0;
+    }
+
     .grid{
       display:grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -371,11 +380,12 @@
         <p class="tagline">
           Hey there! I am <strong>Shino Shamit</strong> a Cybersec Grad, who likes to break things, ethically ;) and then report it. 
           I enjoy turning messy alerts, strange traffic, 
-          and ‘that’s weird…’ moments into clear explanations, documented incidents, and stronger defenses.
-          I enjoy working in the messy middle of cybersecurity where alerts are noisy, traffic is weird, and the answer isn’t obvious.
-          From building hands-on labs to analysing packets and writing investigation notes,
-          I am at home when I am piecing together evidence, building detections, and strengthening defenses one signal at a time.
         </p>
+        <ul class="hero-bullets" aria-label="What I focus on">
+          <li>Turn messy alerts and weird traffic into clear, evidence-based timelines</li>
+          <li>Build detections, tune signal quality, and map behavior to MITRE ATT&CK</li>
+          <li>Document findings so incidents lead to stronger defenses — not repeat incidents</li>
+        </ul>
         <div class="spacer"></div>
         <div class="pills" aria-label="Quick highlights">
           <span class="pill">Melbourne, AU</span>
@@ -587,6 +597,7 @@
   </script>
 </body>
 </html>
+
 
 
 
