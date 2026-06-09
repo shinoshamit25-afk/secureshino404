@@ -4,7 +4,7 @@
 
 A personal portfolio and professional presence for **Shino Shamit** — IT & Cybersecurity graduate, SOC analyst, detection engineer, and aspiring penetration tester based in Australia.
 
-**[→ View Live Site]([https://shinoshamit25-afk.github.io](https://www.shinoshamit.online/))**
+**[→ View Live Site](https://www.shinoshamit.online)**
 
 ---
 
