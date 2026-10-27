@@ -82,9 +82,14 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-
 nav.links{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
 nav.links a{font-family:var(--f-mono);font-size:var(--step--1);text-decoration:none;color:var(--muted);padding:6px 10px;border:1px solid transparent;border-radius:3px;transition:color .2s,border-color .2s,background .2s}
 nav.links a:hover,nav.links a.on{color:var(--cyan);border-color:var(--line);background:rgba(61,242,255,.05)}
+nav.links a.beta-link{color:var(--amber);border-color:rgba(255,181,71,.35)}
+nav.links a.beta-link:hover{color:var(--bg);background:var(--amber);border-color:var(--amber)}
+nav.links a.beta-link sup{font-size:.6em;letter-spacing:.1em;text-transform:uppercase;margin-left:4px;vertical-align:.5em}
 nav.links a.cta{color:var(--bg);background:var(--cyan);font-weight:700}
 nav.links a.cta:hover{color:var(--bg);background:#9ff8ff}
 @media (max-width:760px){nav.links a:not(.cta):not(.keep){display:none}nav.links{flex-wrap:nowrap}nav.links a{padding:6px 7px}}
+.brand .host{font-style:normal}
+@media (max-width:520px){.brand .host{display:none}nav.links a.beta-link sup{display:none}nav.links a[href="#projects"]{display:none}}
 
 .progress{position:fixed;left:0;top:0;height:2px;width:100%;z-index:70;transform-origin:0 50%;transform:scaleX(0);
   background:linear-gradient(90deg,var(--cyan),var(--pink))}
@@ -186,6 +191,9 @@ section.block{padding-block:clamp(64px,10vh,120px)}
 .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
 .pill{padding:2px 8px;border-radius:999px;border:1px solid currentColor;text-transform:uppercase;letter-spacing:.08em;font-size:.64rem}
 .pill.live{color:var(--amber)}.pill.done{color:var(--green)}.pill.study{color:var(--pink)}
+.pill.beta-pill{color:var(--bg);background:var(--amber);border-color:var(--amber);font-weight:700}
+.proj.beta{border-color:rgba(255,181,71,.35)}
+.proj.beta::after{border-color:var(--amber)}
 .proj h3{font-family:var(--f-display);font-weight:600;font-size:var(--step-2);line-height:1.1;margin:0;text-wrap:balance}
 .proj p.sum{margin:0;color:#b8c5da}
 .proj ul.pts{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:.92em;color:#c3cfe2}
@@ -283,13 +291,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <div class="shell">
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><i class="dot"></i><span><b>shino</b>@soc:~$</span></a>
+    <a class="brand" href="#top"><i class="dot"></i><span><b>shino</b><em class="host">@soc:~$</em></span></a>
     <nav class="links" aria-label="Sections">
       <a href="#about">about</a>
       <a href="#projects" class="keep">projects</a>
       <a href="#experience">experience</a>
       <a href="#skills">skills</a>
       <a href="#contact" class="keep">contact</a>
+      <a href="mass-finder/index.html" class="keep beta-link" target="_blank" rel="noopener" title="Mass Finder Victoria, beta">mass finder<sup>beta</sup></a>
       <a class="cta" href="https://drive.google.com/file/d/1tguvCeOEq2XSEKQbCMxa76zoponnJ8iM/view?usp=sharing" target="_blank" rel="noopener">resume ↗</a>
     </nav>
   </div>
@@ -698,7 +707,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   var cx=200, cy=128, R=86;
   el('circle',{cx:cx,cy:cy,r:R,fill:'none',stroke:'rgba(61,242,255,.2)'},ch);
   el('circle',{cx:cx,cy:cy,r:R-26,fill:'none',stroke:'rgba(255,79,184,.25)','stroke-dasharray':'2 5'},ch);
-  var sw = el('g',{class:'sweep'},ch);
+  var sw = el('g',{class:'sweep',style:'transform-box:view-box;transform-origin:'+cx+'px '+cy+'px'},ch);
   el('path',{d:'M'+cx+' '+cy+' L'+cx+' '+(cy-R)+' A'+R+' '+R+' 0 0 1 '+(cx+R*Math.sin(.9))+' '+(cy-R*Math.cos(.9))+' Z',fill:'rgba(61,242,255,.12)'},sw);
   el('line',{x1:cx,y1:cy,x2:cx,y2:cy-R,stroke:'var(--cyan)','stroke-width':1.2},sw);
   stages.forEach(function(s,i){
