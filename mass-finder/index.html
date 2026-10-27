@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mass Finder Victoria (Beta)</title>
+<title>Ad altare</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
 <style>
@@ -39,6 +39,8 @@ a{color:inherit}
 .band .wrap{padding-block:34px 56px;display:grid;gap:22px;justify-items:center;text-align:center}
 .cross{width:46px;height:69px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(2rem,5.4vw,3.1rem);letter-spacing:.06em;margin:0;line-height:1.1;text-wrap:balance}
+.name{display:grid;gap:8px}
+.sub{margin:0;font:700 .85rem var(--ui);letter-spacing:.32em;text-transform:uppercase;color:var(--bandgold)}
 .lede{margin:0;max-width:34em;font-size:1.05rem;color:var(--band-fg);opacity:.88}
 
 .verse{margin:0;max-width:34em}
@@ -101,22 +103,14 @@ footer .wrap{padding-block:22px 34px;display:grid;gap:6px}
 @media (max-width:520px){.arch{border-radius:160px 160px 12px 12px / 70px 70px 12px 12px;padding:52px 16px 18px}.band .wrap{padding-block:26px 44px}}
 @media (prefers-reduced-motion:no-preference){.card{animation:rise .35s ease both}@keyframes rise{from{transform:translateY(6px)}to{transform:none}}}
 </style>
-<style>
-.beta-bar{background:#0a0f1a;color:#d9e4f5;font:500 13px/1.4 "Alegreya Sans","Segoe UI",system-ui,sans-serif;border-bottom:1px solid rgba(61,242,255,.35)}
-.beta-bar .wrap{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;padding-block:8px}
-.beta-bar b{color:#0a0f1a;background:#ffb547;padding:1px 8px;border-radius:999px;font-size:11px;letter-spacing:.12em;margin-right:8px}
-.beta-bar a{color:#3df2ff;text-decoration:none}
-.beta-bar a:hover{text-decoration:underline}
-</style>
 </head>
 <body>
-<div class="beta-bar" role="note"><div class="wrap"><span><b>BETA</b>A testing build by Shino Shamit. Times may be incomplete, so please confirm with the parish.</span><a href="../index.html">&larr; Back to portfolio</a></div></div>
 <header class="band">
   <div class="wrap">
     <svg class="cross" viewBox="0 0 60 90" role="img" aria-label="Cross"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1dc9b"/><stop offset=".5" stop-color="#c79a3a"/><stop offset="1" stop-color="#8f6a1c"/></linearGradient></defs><path fill="url(#gg)" d="M25 0h10v26h25v10H35v54H25V36H0V26h25z"/></svg>
-    <h1>Mass Finder Victoria</h1>
+    <div class="name"><h1>Ad altare</h1><p class="sub" lang="en">To the altar</p></div>
     <p class="lede">Find a Catholic church near you, see when Mass or the Divine Liturgy is on, and get directions. Latin and Eastern Catholic parishes across the state.</p>
-    <figure class="verse"><blockquote>“Come to me, all you that labour, and are burdened, and I will refresh you.”</blockquote><figcaption>Matthew 11:28</figcaption></figure>
+    <figure class="verse"><blockquote>“Come to me, all you that are weary and are carrying heavy burdens, and I will give you rest.”</blockquote><figcaption>Matthew 11:28</figcaption></figure>
     <form class="arch" id="f" autocomplete="off">
       <div class="field">
         <label class="lbl" for="town">Where are you?</label>
